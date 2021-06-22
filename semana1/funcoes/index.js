@@ -51,11 +51,13 @@
 
 //         "Eu sou Caio, tenho 23 anos, moro em São Paulo e sou estudante."
 //         ```
- function funcaoSobreMim () { 
-     console.log ("Eu sou Bray, tenho 30 anos , moro em SC e sou estudante")
 
- }
- funcaoSobreMim()
+// function funcaoSobreMim () { 
+//     console.log ("Eu sou Bray, tenho 30 anos , moro em SC e sou estudante")
+
+// }
+// funcaoSobreMim()
+
 
 //         Troque o nome, idade, cidade e se é estudante ou não por informações sobre você. 
 // Lembrando que a função não possui entradas, apenas imprime essa mensagem.
@@ -73,6 +75,7 @@
 
 //             `"Eu sou Laís, tenho 23 anos, moro em São Paulo e sou instrutora."`
 
+
 let nomeDoUsuario = prompt("Qual o seu nome?");
 let idadeDoUsuario = Number (prompt ("Qual sua idade?"))
 let enderecoDoUsuario = prompt ("Onde você mora?")
@@ -82,6 +85,7 @@ function informacoesSobreOUsuario ( nome, idade, cidade, profissao ) {
 console.log (`Eu sou ${nomeDoUsuario}, tenho ${idadeDoUsuario} anos, moro em ${enderecoDoUsuario}, e sou ${profissaoDoUsuario}`)
 }
 informacoesSobreOUsuario()
+
 
 
 
