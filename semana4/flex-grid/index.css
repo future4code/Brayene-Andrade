@@ -1,0 +1,33 @@
+
+
+header {
+    background-color:mediumvioletred ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.div-container {
+    display: flex;
+    justify-content: center;
+}   
+
+.header-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-top: 10px;
+
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: mediumvioletred;   
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    
+    }
