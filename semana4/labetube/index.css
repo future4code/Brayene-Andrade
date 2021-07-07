@@ -1,0 +1,34 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: orangered;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.general-container {
+
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 4, 4;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin: 20px;
+}
+
+.footer {
+    background-color: slategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
