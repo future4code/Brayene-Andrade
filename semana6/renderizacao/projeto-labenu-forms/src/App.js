@@ -15,11 +15,37 @@ button{
 `
 
 class App extends React.Component {
+  state = {
+    etapa: 1,
+
+
+  };
+
+  renderizaEtapa = () => {
+    switch(this.state.etapa){
+      case 1:  
+        return <Dadosgerais/>
+      case 2:
+        return <Comsuperior/>
+      case 3:
+        return <Semsuperior/>
+      case 4:
+        return <Agradecimento/>
+      default:
+        break
+    }
+    
+  }
+
+  changeEtapa = () => {
+    this.setState({etapa:this.state.etapa + 1})
+  }
+  
   render() {
     return (
       <General>
-        <Dadosgerais/>
-        <button>Próxima etapa</button>
+        {this.renderizaEtapa()} 
+         { this.state.etapa <4 && <button onClick={this.changeEtapa}>Próxima etapa</button>}
       </General>
     );
   }

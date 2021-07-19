@@ -5,6 +5,9 @@ const General = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+    button {
+    margin: 10px;
+}
 `
 
 class Semsuperior extends React.Component {
@@ -17,6 +20,7 @@ class Semsuperior extends React.Component {
         <input type='text'></input>
         <p>6. Você fez algum curso complementar? </p>
         <input type='text'></input>
+
         <select>
           <option>Nenhum</option>
           <option>Curso técnico</option>
