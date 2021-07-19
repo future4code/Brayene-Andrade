@@ -19,7 +19,6 @@ class Semsuperior extends React.Component {
         <p>5. Por que você não terminou um curso de graduação? </p>
         <input type='text'></input>
         <p>6. Você fez algum curso complementar? </p>
-        <input type='text'></input>
 
         <select>
           <option>Nenhum</option>
