@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "b8c5e4e7-abc7-4ae8-a037-092700419edb",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://minha-rquisicao",
+					"protocol": "https",
+					"host": [
+						"minha-rquisicao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request labefy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://minha-rquisicao",
+					"protocol": "https",
+					"host": [
+						"minha-rquisicao"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
