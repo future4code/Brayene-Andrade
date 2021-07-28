@@ -37,11 +37,29 @@ export default  class TelaUsuarios extends React.Component {
 
     }
 
+    deletaUsuario = (id) => {
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
+        axios.delete(url, {
+            headers:{
+                Authorization: "bray-andrade-lovelace"
+            }
+            
+        })
+        .then((res) => {
+            alert ("Usuário(a) deletado (a) com sucesso!")
+            this.pegarUsuarios()
+        })
+        .catch((err) => {
+            alert ("Ocorreu um erro , tente novamente!")
+        })
+
+    }
+
     render (){
         const listaUsuarios = this.state.usuarios.map ((user) => {
             return (<cardUsuario key={user.id}>
                 {user.name}
-                <button>X</button>
+                <button onClick={() => this.deletaUsuario(user.id)}>X</button>
                 </cardUsuario>
                 )
 
