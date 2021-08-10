@@ -34,10 +34,11 @@ const Post = (props) => {
   const enviarComentario = (comentario) => {
     const listaDeComentarios = [...comentarios, comentario]
 
-      setComentarios (listaDeComentarios)
-      setComentando (false)
-      setNumeroComentarios (setNumeroComentarios + 1)
-    
+    ({
+      comentarios: listaDeComentarios,
+      comentando: false,
+      numeroComentarios: setumeroComentarios + 1
+    })
   }
 
   const iconeCurtida = curtido ? (iconeCoracaoPreto) : (iconeCoracaoBranco)
@@ -68,13 +69,13 @@ const Post = (props) => {
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
-          valorContador={numeroCurtidas}
+          // valorContador={numeroCurtidas}
         />
 
         <IconeComContador
           icone={iconeComentario}
           onClickIcone={onClickComentario}
-          valorContador={numeroComentarios}
+          // valorContador={numeroComentarios}
         />
       </PostFooter>
       {caixaDeComentario}
