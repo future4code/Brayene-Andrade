@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import "./styles.css";
 import axios from "axios";
 import PokeCard from "./components/PokeCard";
@@ -7,21 +7,20 @@ const App = () => {
   const [pokeList, setPokeList] = useState([]);
   const [pokeName, setPokeName] = useState("");
 
-  // método que roda após a montagem do componente
-  componentDidMount = () => {
-    // função axios que está batendo na API e buscando 151 pokemons
+  useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon/?limit=151")
       .then((response) => {
         // função que está setando no estado os 151 pokemons
-        this.setState({ pokeList: response.data.results });
+        setPokeList(response.data.results)
       })
       .catch((err) => {
         console.log(err);
-      });
-  };
+      })
+  }, [])
 
-  changePokeName = (event) => {
+  
+   const changePokeName = (event) => {
     setPokeName(event.target.value);
   };
 
