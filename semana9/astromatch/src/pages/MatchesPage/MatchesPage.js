@@ -1,10 +1,11 @@
 import React from "react"
+import { ContainerMatch } from "./styled"
 
 export const MatchesPage = () => {
     return (
-        <div>
+        <ContainerMatch>
             MatchesPage
-        </div>
+        </ContainerMatch>
 
     )
 } 
