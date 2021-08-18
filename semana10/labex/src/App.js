@@ -6,6 +6,7 @@ const App = () => {
 
 return (
  <div>
+   <p> oi sumido</p>
    <Router/>
  </div>
 

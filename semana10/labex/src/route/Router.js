@@ -1,34 +1,61 @@
 import React from "react"
-import { BrowserRouter, Switch, Router } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HomePage } from "../pages/HomePage"
+import { ListTripsPage } from "../pages/ListTripsPage"
+import { AppFormPage } from "../pages/ApplicationFormPage"
+import { AdminPage } from "../pages/AdminHomePage"
+import { CreateTrip } from "../pages/CreateTripPage"
+import { LoginPage } from "../pages/LoginPage"
+import { TripDetails } from "../pages/TripDetailsPage"
+import {ErrorPage} from "../pages/ErrorPage"
 
 
 
-const Router = () => {
+const ComponentRoute = () => {
 
     return (
-    <BrowserRouter>
-    
-    <Switch>
+    <BrowserRouter>    
+    <Routes>
 
-    <Router exact path={"/"}>
+    <Route exact path={"/"}>
         <HomePage/>
-    </Router>
+    </Route>
 
-    <Router exact path={"/listTrips"}>
+    <Route exact path={"/listTrips"}>
          <ListTripsPage/>
-    </Router>
+    </Route>
 
-    <Router exact path={"/appForm"}>
+    <Route exact path={"/appForm"}>
         <AppFormPage/>
-    </Router>
+    </Route>
+    
+    <Route exact path={"/login"}>
+        <LoginPage/>
+    </Route>
+
+    <Route exact path={"/admin"}>
+        <AdminPage/>
+    </Route>
+
+    <Route exact path={"/tripDetails"}>
+        <TripDetails/>
+    </Route>
+    
+    <Route exact path={"createTrip"}>
+        <CreateTrip/>
+    </Route>
+
+    <Route exact path={" "}>
+        <ErrorPage/>
+    </Route>
 
 
 
-    </Switch>
+    </Routes>
     </BrowserRouter>
 
     )
 
 
 }
-export default Router
+export default Route
