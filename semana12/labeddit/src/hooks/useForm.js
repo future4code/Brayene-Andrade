@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-const UseForm = (initialState) => {
+const useForm = (initialState) => {
     const [form, setForm] = useState (initialState)
 
     const handleInputChange = (event) => {

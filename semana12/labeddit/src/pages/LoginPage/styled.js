@@ -5,6 +5,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 width: 100vw;
+margin-top: 10vh;
 `
 export const InputsContainer = styled.div`
 display: flex;
@@ -27,6 +28,6 @@ width: 80vw;
 max-width: 450px;
 `
 export const LogoImage = styled.img`
-width: auto;
+width: 370px;
 height: auto;
 `

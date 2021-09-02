@@ -1,31 +1,35 @@
-import React from 'react'
-import {ScreenContainer, LogoImage, InputsContainer,} from "./styled"
-import logo from "../../assets/LOGO-LBEDIT.jpg"
-import TextField from '@material-ui/core/TextField'
-import useForm from "../../hooks/useForm"
+import React from "react";
+import {
+  ScreenContainer,
+  LogoImage,
+  SignUpButtonContainer,
+} from "./styled";
+import logo from "../../assets/logo.jpg";
+import { Button } from "@material-ui/core";
+import LoginForm from "./LoginForm";
+import { goToCadastro } from "../../routes/cordinator";
+import { useHistory } from "react-router-dom";
 
 const LoginPage = () => {
-    const [form, onChange, clear] = useForm({email: "", password: ""})
-    const onSubmitForm = () => {
+    const history = useHistory()
+   return (
+    <ScreenContainer>
+      <LogoImage src={logo} />
+      <LoginForm/>
+      <SignUpButtonContainer>
+        <Button
+          onClick={() => goToCadastro (history)}
+          type={"submit"}
+          fullWidth
+          variant={"text"}
+          color={"primary"}
+          margin={"normal"}
+        >
+          Ainda não possui conta? Cadastre-se aqui!
+        </Button>
+      </SignUpButtonContainer>
+    </ScreenContainer>
+  );
+};
 
-    }
-
-    return (
-        <ScreenContainer>
-            <LogoImage src={logo}/>
-            <InputsContainer>
-                <form onSubmit={onSubmitForm}>
-                    <TextField
-                        name={"email"}
-                        value={form.email}
-                        onChange={onChange}
-                    />
-
-                </form>
-            
-            </InputsContainer>
-        </ScreenContainer>
-    )
-}
-
-export default LoginPage
+export default LoginPage;

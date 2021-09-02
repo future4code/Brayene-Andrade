@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import { ScreenContainer, LogoImage } from "./styled";
+import logo from "../../assets/logo.jpg";
+import CadastroForm from "./CadastroForm";
 
 const CadastroPage = () => {
-    return (
-        <div>
-            <h2>Cadastro</h2>
-        </div>
-    )
-}
+  return (
+    <ScreenContainer>
+      <LogoImage src={logo} />
+      <CadastroForm />
+    </ScreenContainer>
+  );
+};
 
-export default CadastroPage
+export default CadastroPage;
