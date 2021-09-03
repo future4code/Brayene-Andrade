@@ -4,6 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import { useHistory } from "react-router";
 import useForm from "../../hooks/useForm";
 import { Button } from "@material-ui/core";
+import { signUP } from "../../services/user";
 
 const CadastroForm= () => {
   const history = useHistory()
@@ -11,7 +12,8 @@ const CadastroForm= () => {
   
   const onSubmitForm = (event) => {
     event.preventDefault();
-    console.log(form)
+   signUP(form, clear, history)
+  
   };
 
   return (
