@@ -2,7 +2,7 @@ import axios from "axios";
 import { BASE_URL } from "../constants/urls";
 import {goToFeed} from "../routes/cordinator"
 
-export const login = (body, clear, history) => {
+export const login = (body, clear, history, setRightButtonText) => {
   const headers = {
     headers: {
       ContentType: "application/json",
@@ -14,11 +14,12 @@ export const login = (body, clear, history) => {
       localStorage.setItem("token", res.data.token)
       clear();
       goToFeed(history)
+      setRightButtonText("Logout")
     })
-    .catch((err) => alert("Ops, algo de errado não está certo"));
+    .catch((err) => alert(err.response.data.message));
 };
 
-export const signUP = (body, clear, history) => {
+export const signUP = (body, clear, history, setRightButtonText) => {
   const headers = {
     headers: {
       ContentType: "application/json",
@@ -31,6 +32,7 @@ export const signUP = (body, clear, history) => {
       console.log (res.data.token)
       clear();
       goToFeed(history)
+      setRightButtonText("Logout")
     })
-    .catch((err) => alert("Ops, algo de errado não está certo"));
+    .catch((err) => alert(err.response.data.message));
 };

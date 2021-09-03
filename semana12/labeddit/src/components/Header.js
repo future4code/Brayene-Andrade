@@ -23,9 +23,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const Header = ({rightButtonText, setRightButtonText}) => {
   const classes = useStyles();
+  const token = localStorage.getItem("token")
   const history = useHistory();
+  
+  const logout = () => {
+    localStorage.removeItem("token")
+  }
+
+  const rightButtonAction = () => {
+    if (token){
+      logout()
+      setRightButtonText("Login")
+      goToLogin(history)
+    } else{
+      goToLogin(history)
+    }
+
+  }
+
+
 
   return (
       <AppBar position="static">
@@ -36,7 +54,7 @@ const Header = () => {
           <Typography variant="h6" className={classes.title}>
           <Button onClick={() => goToFeed (history)} color="inherit">LabEddit</Button>
           </Typography>
-          <Button onClick={() => goToLogin (history)} color="inherit">Login</Button>
+          <Button onClick={rightButtonAction} color="inherit">{rightButtonText}</Button>
         </Toolbar>
       </AppBar>
   );

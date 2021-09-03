@@ -10,12 +10,12 @@ import LoginForm from "./LoginForm";
 import { goToCadastro } from "../../routes/cordinator";
 import { useHistory } from "react-router-dom";
 
-const LoginPage = () => {
+const LoginPage = ({setRightButtonText}) => {
     const history = useHistory()
    return (
     <ScreenContainer>
       <LogoImage src={logo} />
-      <LoginForm/>
+      <LoginForm setRightButtonText={setRightButtonText}/>
       <SignUpButtonContainer>
         <Button
           onClick={() => goToCadastro (history)}

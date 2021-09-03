@@ -6,13 +6,13 @@ import useForm from "../../hooks/useForm";
 import { Button } from "@material-ui/core";
 import { signUP } from "../../services/user";
 
-const CadastroForm= () => {
+const CadastroForm= ({setRightButtonText}) => {
   const history = useHistory()
-  const [form, onChange, clear] = useForm({ name: "", email: "", password: "" });
+  const [form, onChange, clear] = useForm({ username: "", email: "", password: "" });
   
   const onSubmitForm = (event) => {
     event.preventDefault();
-   signUP(form, clear, history)
+   signUP(form, clear, history, setRightButtonText)
   
   };
 
@@ -20,8 +20,8 @@ const CadastroForm= () => {
       <InputsContainer>
         <form onSubmit={onSubmitForm}>
         <TextField
-            name={"name"}
-            value={form.name}
+            name={"username"}
+            value={form.username}
             onChange={onChange}
             label={"Nome"}
             variant={"outlined"}

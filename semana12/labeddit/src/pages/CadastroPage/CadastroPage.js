@@ -4,12 +4,12 @@ import logo from "../../assets/logo.jpg";
 import CadastroForm from "./CadastroForm";
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
-const CadastroPage = () => {
+const CadastroPage = ({setRightButtonText}) => {
   useUnprotectedPage()
   return (
     <ScreenContainer>
       <LogoImage src={logo} />
-      <CadastroForm />
+      <CadastroForm setRightButtonText={setRightButtonText} />
     </ScreenContainer>
   );
 };
