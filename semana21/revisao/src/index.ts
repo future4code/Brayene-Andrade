@@ -22,6 +22,12 @@ export const connection = knex({
   }
 });
 
+//app.get('/ping')
+
+
+
+
+
 // por performance, é bom o servidor ser o último trecho de código do documento
 
 const server = app.listen(process.env.PORT || 3003, () => {
