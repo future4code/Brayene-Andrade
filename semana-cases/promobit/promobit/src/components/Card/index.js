@@ -1,14 +1,15 @@
 import React from 'react'
 import * as S from './styled'
 
-const Card = () => {
+const Card = ({title, release_date, img}) => {
     return (
         <S.Card>
 
-            <h4>Nome do Filme</h4>
-            <h4>Gênero</h4>
-            <h4>Ano</h4>
-            <button>Mais detalhes</button>
+            <img src={`https://image.tmdb.org/t/p/original${img}`}/>
+            <h3>{title}</h3>
+            <h3>{release_date}</h3>
+        
+            <button>More details</button>
 
         </S.Card>
     )

@@ -1,13 +1,13 @@
 import React from "react"
 import Header from "../../components/Header"
-import Card from "../../components/Card"
+import UseGetPopular from "../../router/useGetPopular"
 
 
 const Home = () => {
     return (
         <div>
             <Header/>
-            <Card/>
+            <UseGetPopular/>
         </div>
     )
 }

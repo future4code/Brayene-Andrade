@@ -9,10 +9,14 @@ align-items: center;
 h1{
     margin-bottom: 15px;
     font-family: 'Dosis', sans-serif;
+    font-size: xx-large;
 }
 
 input {
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
+    width: 800px;
+    height: 20px;
+    border-radius: 5px;
 }
 `
 
