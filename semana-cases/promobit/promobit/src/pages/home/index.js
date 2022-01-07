@@ -1,13 +1,16 @@
 import React from "react"
 import Header from "../../components/Header"
-import UseGetPopular from "../../router/useGetPopular"
+import UseGetPopular from "../../routes/useGetPopular"
+import { GeneralContainer } from "./styled"
 
 
 const Home = () => {
     return (
         <div>
-            <Header/>
-            <UseGetPopular/>
+           <Header/>
+            <GeneralContainer>
+                <UseGetPopular/>
+            </GeneralContainer>
         </div>
     )
 }

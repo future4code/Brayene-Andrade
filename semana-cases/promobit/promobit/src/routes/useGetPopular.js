@@ -22,24 +22,23 @@ const UseGetPopular = () => {
       console.log(response.data.results);
       return response?.data;
     }
-  }
+  };
 
   const mostraTela = () => {
-    const renderizaFilmes = movies.map(({title, release_date, poster_path}) => {
-        
-        return <Card title={title} release_date={release_date} img={poster_path} />
-    })
-    return renderizaFilmes
-  }
+    const renderizaFilmes = movies.map(
+      ({ title, release_date, poster_path }) => {
+        return (
+            <Card title={title} release_date={release_date} img={poster_path} />
+                );
+      }
+    );
+    return renderizaFilmes;
+  };
 
   useEffect(() => {
-      retornaDados();
-    }, []);
-    return <div>{mostraTela()}</div> 
-    
-
-
-
-}
+    retornaDados();
+  }, []);
+  return <div className="movieCardContainer">{mostraTela()}</div>;
+};
 
 export default UseGetPopular;

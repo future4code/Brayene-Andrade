@@ -1,8 +1,21 @@
 import React from "react";
-import Router from "./router/routers";
+// import Pagination from "./pages/pagination";
+import Router from "./routes/routers";
+
+const LIMIT = 6;
+
 
 const App = () => {
-  return < Router />
+  return (
+    <div>
+      <Router />
+      {/* <Pagination 
+      limit={LIMIT} 
+      total={60} 
+      offset={12}
+      /> */}
+    </div>
+  );
 };
 
 export default App;
