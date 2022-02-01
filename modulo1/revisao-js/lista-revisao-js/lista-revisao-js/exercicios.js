@@ -24,7 +24,15 @@ function retornaNumerosPares(array) {
 }
 
 // EXERCÍCIO 05
-function retornaNumerosParesElevadosADois(array) {}
+function retornaNumerosParesElevadosADois(array) {
+  let novoArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      novoArray.push(array[i] * array[i]);
+    }
+  }
+  return novoArray;
+}
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {}
