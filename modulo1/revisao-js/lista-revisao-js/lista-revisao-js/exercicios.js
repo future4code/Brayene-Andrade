@@ -8,11 +8,14 @@ function retornaTamanhoArray(array) {
 }
 
 // EXERCÍCIO 02
-function retornaArrayInvertido(array) {}
-return array.reverse();
+function retornaArrayInvertido(array) {
+  return array.reverse();
+}
 
 // EXERCÍCIO 03
-function retornaArrayOrdenado(array) {}
+function retornaArrayOrdenado(array) {
+  return array.sort((a, b) => a - b);
+}
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {}
