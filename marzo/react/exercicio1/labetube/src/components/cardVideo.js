@@ -1,11 +1,11 @@
 import React from "react";
 
-export const cardVideo = (props) => {
+export const CardVideo = (props) => {
   return (
     <section className="painel-de-videos">
       <div className="box-pagina-principal" onClick={reproduzVideo}>
         <img src="https://picsum.photos/400/400?a=1 " alt="" />
-        <h4>{titulo}</h4>
+        <h4>Título: {props.title} </h4>
       </div>
       <div className="box-pagina-principal" onClick={reproduzVideo}>
         <img src="https://picsum.photos/400/400?a=2 " alt="" />
